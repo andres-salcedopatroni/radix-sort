@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="cambiar.js"></script>
+</head>
+
+<body>
+    <nav class="barraNav">
+		<img src="Imagenes/logo.png" width="60" height="70" alt="Programa logo" class="nav-brand">
+      Ánalisis y Diseño de Algoritmos<br />Facultad de Ingeniería de Sistemas e Informática -
+            UNMSM</label>
+        
+    </nav>
+ 
+    <div id="contenedor">
+        <div id="lienzoRadix" class="lienzo"></div>
+        <div id="lienzo" class="radix">
+			<div class="digCont"><div id="r1" class="radixp" textContent="0">0</div><div class="numero">0</div></div>
+			<div class="digCont"><div id="r2" class="radixp" textContent="0">0</div><div class="numero">1</div></div>
+			<div class="digCont"><div id="r3" class="radixp" textContent="0">0</div><div class="numero">2</div></div>
+			<div class="digCont"><div id="r4" class="radixp" textContent="0">0</div><div class="numero">3</div></div>
+			<div class="digCont"><div id="r5" class="radixp" textContent="0">0</div><div class="numero">4</div></div>
+			<div class="digCont"><div id="r6" class="radixp" textContent="0">0</div><div class="numero">5</div></div>
+			<div class="digCont"><div id="r7" class="radixp" textContent="0">0</div><div class="numero">6</div></div>
+			<div class="digCont"><div id="r8" class="radixp" textContent="0">0</div><div class="numero">7</div></div>
+			<div class="digCont"><div id="r9" class="radixp" textContent="0">0</div><div class="numero">8</div></div>
+			<div class="digCont"><div id="r10" class="radixp" textContent="0">0</div><div class="numero">9</div></div>
+        </div>
+    </div>
+	<aside id="lateral">
+		<div id="algo">PSEUDOCÓDIGO</div>
+		<div id="pseudocodigo1">
+            RadixSort(A, d)<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;for i=1 to d<br>
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;CountingSort(A,i);
+        </div>
+		<div id="pseudocodigo2">
+            CountingSort(A,i)<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;for i=1 to 10<br>
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;C[i]= 0;<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;for j=1 to n<br>
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;C[(A[j]/(10^i)) mod 10 +1] += 1;<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;for i=2 to 10<br>
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;C[i] = C[i]+C[i-1];<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;for j=n downto 1<br>
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pos=(A[j]/(10^(i-1))) mod 10 +1;<br>
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;B[C[pos]] = A[j];<br>
+            &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;C[pos] = C[pos]- 1;<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A=B;
+	</aside>
+    <div id="pie">
+        <div id="cont">
+            <form action="" id="formulario1">
+                Ingresar Cantidad:<br>
+                <input type="text" id="cantidad">
+                <br>
+				Ingresar rango:<br>
+				Desde:<br>
+				<input type="text" id="minimo">
+				<br>
+                Hasta:<br>
+                <input type="text" id="maximo">
+				<br>
+					<label for="velocidad"class="vel">Velocidad:<br> </label>
+					<input type="radio" id="normal" name="velocidad" class="vel" value="2" checked>Normal</input><br>
+					<input type="radio" id="rapido" name="velocidad" class="vel" value="1">Rápido</input>	<br>					
+                <input type="button" id="ordenar" value="ordena" >                    
+			</form>
+		</div>
+		<div id="cifra">
+			<div id="titulo2">Cifra N°:</div>
+			<div id="digito"></div>
+		</div>
+        <div id="time">
+			<div id="titulo">TIEMPO DE EJECUCIÓN:</div>
+			<div id="tiempo"></div>
+		</div>
+		<div id="intCont">
+			<div id="titulo1">INTEGRANTES:</div>
+			<div id="integrantes">1.Varillas Melendez Jose Luis<br>
+				2.Silva Jaramillo Yamile<br>
+				3.Salcedo Patroni Andrés Gabriel<br>
+				4.Barrios Peña Ernesto Zenobio<br>
+				5.Valenzuela Martinez Alessandro Gregory</div>
+		</div>
+    </div>
+</body>
+
+</html>
